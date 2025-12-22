@@ -40,7 +40,7 @@ This is a fully animated, interactive, 3D developer portfolio template designed 
 
 ```bash
 git clone https://github.com/elijah-farrell/Awwwards-Portfolio.git
-cd portfolio-template02
+cd Awwwards-Portfolio
 npm install
 npm run dev
 ```
