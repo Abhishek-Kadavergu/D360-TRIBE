@@ -1,19 +1,11 @@
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import Marquee from "../components/Marquee";
 import { socials } from "../constants";
 import gsap from "gsap";
 
 const Contact = () => {
-  const text = `Got a question, how or project Idea?
-    WE’D love to hear from you and discus further!`;
-  const items = [
-    "Say Hello",
-    "Start A Project",
-    "Open For Work",
-    "Let's Chat",
-    "Get In Touch",
-  ];
+  const text = `See D360 Tribe on your terms. Book a live walkthrough.`;
   useGSAP(() => {
     gsap.from(".social-link", {
       y: 100,
@@ -34,8 +26,8 @@ const Contact = () => {
     >
       <div>
         <AnimatedHeaderSection
-          subTitle={"You Dream It, I Code it"}
-          title={"Contact"}
+          subTitle={"Talk to us. Move faster."}
+          title={"Book a demo"}
           text={text}
           textColor={"text-white"}
           withScrollTrigger={true}
@@ -46,37 +38,50 @@ const Contact = () => {
               <h2>E-mail</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <p className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl">
-                hello@example.com
+                hello@d360tribe.com
               </p>
             </div>
             <div className="social-link">
-              <h2>Phone</h2>
+              <h2>Sales</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <p className="text-xl lowercase md:text-2xl lg:text-3xl">
-                +33 7 12 12 32 12
+                Pick a slot. We show the product.
               </p>
             </div>
             <div className="social-link">
-              <h2>Social Media</h2>
+              <h2>Connect</h2>
               <div className="w-full h-px my-2 bg-white/30" />
               <div className="flex flex-wrap gap-2">
-                {socials.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200"
-                  >
-                    {"{ "}
-                    {social.name}
-                    {" }"}
-                  </a>
-                ))}
+                {socials.map((social, index) =>
+                  social.internal ? (
+                    <Link
+                      key={index}
+                      to={social.href}
+                      className="text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200"
+                    >
+                      {"{ "}
+                      {social.name}
+                      {" }"}
+                    </Link>
+                  ) : (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs leading-loose tracking-wides uppercase md:text-sm hover:text-white/80 transition-colors duration-200"
+                    >
+                      {"{ "}
+                      {social.name}
+                      {" }"}
+                    </a>
+                  )
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Marquee items={items} className="text-white bg-transparent" />
     </section>
   );
 };

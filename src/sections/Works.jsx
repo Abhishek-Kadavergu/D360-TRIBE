@@ -8,9 +8,7 @@ import { useGSAP } from "@gsap/react";
 const Works = () => {
   const overlayRefs = useRef([]);
 
-  const text = `Featured projects that have been meticulously
-    crafted with passion to drive
-    results and impact.`;
+  const text = `Six outcomes. One platform.`;
 
   useGSAP(() => {
     gsap.from("#project", {
@@ -60,12 +58,11 @@ const Works = () => {
     });
   };
 
-
   return (
     <section id="work" className="flex flex-col min-h-screen">
       <AnimatedHeaderSection
-        subTitle={"Logic meets Aesthetics, Seamlessly"}
-        title={"Works"}
+        subTitle={"Outcomes you can measure."}
+        title={"Use cases"}
         text={text}
         textColor={"text-black"}
         withScrollTrigger={true}
@@ -79,7 +76,6 @@ const Works = () => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
-            {/* overlay */}
             <div
               ref={(el) => {
                 overlayRefs.current[index] = el;
@@ -87,27 +83,21 @@ const Works = () => {
               className="absolute inset-0 hidden md:block duration-200 bg-black -z-10 clip-path"
             />
 
-            {/* title */}
             <div className="flex justify-between px-1 sm:px-1 md:px-3 lg:px-6 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white ultra-small-screen">
-              <h2 className="lg:text-[32px] text-[26px] leading-none">
-                {project.name}
-              </h2>
-              <Icon icon="lucide:arrow-up-right" className="md:size-6 size-5" />
-            </div>
-            {/* divider */}
-            <div className="w-full h-0.5 bg-black/80" />
-            {/* framework */}
-            <div className="flex px-1 sm:px-1 md:px-3 lg:px-6 text-xs leading-loose uppercase transtion-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12 ultra-small-screen">
-              {project.frameworks.map((framework) => (
-                <p
-                  key={framework.id}
-                  className="text-black transition-colors duration-500 md:group-hover:text-white"
-                >
-                  {framework.name}
+              <div className="flex flex-col gap-1 md:gap-2 md:flex-row md:items-baseline md:justify-between md:w-full md:pr-8">
+                <h2 className="lg:text-[32px] text-[26px] leading-none">
+                  {project.name}
+                </h2>
+                <p className="text-sm md:text-base text-black/70 md:group-hover:text-white/80 md:max-w-xl md:text-right tracking-wide">
+                  {project.description}
                 </p>
-              ))}
+              </div>
+              <Icon
+                icon="lucide:arrow-up-right"
+                className="md:size-6 size-5 flex-shrink-0 md:mt-1"
+              />
             </div>
-            {/* mobile preview image */}
+            <div className="w-full h-0.5 bg-black/80" />
             <div className="relative flex items-center justify-center px-1 sm:px-1 md:px-3 lg:px-6 md:hidden h-[400px] ultra-small-screen">
               <img
                 src={project.bgImage}

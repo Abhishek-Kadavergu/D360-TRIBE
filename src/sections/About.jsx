@@ -6,11 +6,8 @@ import gsap from "gsap";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const About = () => {
-  const text = `Passionate about clean architecture
-    I build scalable, high-performance solutions
-    from prototype to production`;
-  const aboutText = `Committed to continuous growth in tech—from web development to AI research. Every challenge is a chance: expanding skills and contributing to meaningful projects.
-  When I'm not learning:`;
+  const text = `Scale teams without HR sprawl.`;
+  const aboutText = `D360 Tribe pairs AI automation with disciplined workflows—from first day to last. You reclaim time, cut errors, and prove every step.`;
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {
@@ -38,8 +35,8 @@ const About = () => {
   return (
     <section id="about" className="min-h-screen bg-black rounded-b-4xl">
       <AnimatedHeaderSection
-        subTitle={"Innovating with code, Growing through technology"}
-        title={"About"}
+        subTitle={"Automation first. Visibility always."}
+        title={"About D360 Tribe"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
@@ -47,28 +44,24 @@ const About = () => {
       <div className="flex flex-col items-center justify-between gap-16 px-1 sm:px-1 md:px-3 lg:px-6 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60 ultra-small-screen">
         <img
           ref={imgRef}
-          src="images/pfp.png"
-          alt="John Doe Smith"
+          src="images/image-02.jpg"
+          alt="D360 Tribe Platform"
           className="w-md rounded-3xl"
         />
         <div className="w-full">
           <AnimatedTextLines text={aboutText} className={"w-full"} />
           <div className="mt-4 space-y-2">
             <div className="flex items-center gap-3">
-              <Icon icon="lucide:code" className="text-white/80" />
-              <span>Open-sourcing my latest experiment—because rising tides lift all ships</span>
+              <Icon icon="lucide:zap" className="text-white/80" />
+              <span>Automate the full employee lifecycle</span>
             </div>
             <div className="flex items-center gap-3">
-              <Icon icon="lucide:search" className="text-white/80" />
-              <span>Exploring new technologies</span>
+              <Icon icon="lucide:shield-check" className="text-white/80" />
+              <span>Security and audit trails by default</span>
             </div>
             <div className="flex items-center gap-3">
-              <Icon icon="lucide:mountain" className="text-white/80" />
-              <span>Hiking the Adirondacks</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Icon icon="lucide:gamepad-2" className="text-white/80" />
-              <span>Gaming</span>
+              <Icon icon="lucide:trending-up" className="text-white/80" />
+              <span>Control cost as you scale headcount</span>
             </div>
           </div>
         </div>

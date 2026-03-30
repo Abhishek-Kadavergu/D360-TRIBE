@@ -5,20 +5,7 @@ import gsap from "gsap";
 
 const ContactSummary = () => {
   const containerRef = useRef(null);
-  const items = [
-    "Innovation",
-    "Precision",
-    "Trust",
-    "Collaboration",
-    "Excellence",
-  ];
-  const items2 = [
-    "contact us",
-    "contact us",
-    "contact us",
-    "contact us",
-    "contact us",
-  ];
+  const items = ["Automate", "Control", "Scale", "Secure", "Simplify"];
 
   useGSAP(() => {
     gsap.to(containerRef.current, {
@@ -34,24 +21,35 @@ const ContactSummary = () => {
   return (
     <section
       ref={containerRef}
-      className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
+      className="flex flex-col items-center justify-center min-h-screen gap-2 mb-16"
     >
       <Marquee items={items} />
-      <div className="overflow-hidden font-light text-center contact-text-responsive">
+      <div className="overflow-hidden font-light text-center contact-text-responsive mt-32">
         <p>
-          “ Let’s build a <br />
-          <span className="font-normal">memorable</span> &{" "}
-          <span className="italic">inspiring</span> <br />
-          web application <span className="text-gold">together</span> “
+          Scale the <span className="font-normal">business</span>.
+          <br />
+          Not the <span className="text-gold">software bill</span>.
         </p>
       </div>
-      <Marquee
-        items={items2}
-        reverse={true}
-        className="text-black bg-transparent border-y-2"
-        iconClassName="stroke-gold stroke-2 text-primary"
-        icon="material-symbols-light:square"
-      />
+
+      <div className="mt-16 flex flex-col items-center gap-6 px-4">
+        <p className="font-[family-name:var(--font-amiamie)] text-sm font-medium uppercase tracking-[0.35em] text-black md:text-base lg:text-lg">
+          Powered by
+        </p>
+        <a
+          href="https://piazza-website-beta.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block transition-opacity duration-300 hover:opacity-85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black/40"
+          aria-label="Piazza Consulting Group — open website"
+        >
+          <img
+            src="/images/piazza-logo-black.png"
+            alt="Piazza Consulting Group"
+            className="h-16 w-auto max-w-[min(90vw,320px)] object-contain md:h-20 lg:h-24"
+          />
+        </a>
+      </div>
     </section>
   );
 };
