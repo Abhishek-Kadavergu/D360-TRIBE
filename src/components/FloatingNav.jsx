@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { label: "Features", sectionId: "services" },
   { label: "Use cases", sectionId: "work" },
   { label: "About", sectionId: "about" },
-  { label: "Contact", sectionId: "contact" },
+  // { label: "Contact", sectionId: "contact" },
 ];
 
 const FloatingNav = () => {
@@ -107,11 +107,10 @@ const FloatingNav = () => {
             <li key={item.sectionId}>
               <button
                 type="button"
-                className={`floating-nav__link ${
-                  activeSection === item.sectionId
+                className={`floating-nav__link ${activeSection === item.sectionId
                     ? "floating-nav__link--active"
                     : ""
-                }`}
+                  }`}
                 onClick={() => scrollTo(item.sectionId)}
               >
                 {item.label}
@@ -136,19 +135,17 @@ const FloatingNav = () => {
       </nav>
 
       <div
-        className={`floating-nav__mobile ${
-          mobileOpen ? "floating-nav__mobile--open" : ""
-        }`}
+        className={`floating-nav__mobile ${mobileOpen ? "floating-nav__mobile--open" : ""
+          }`}
       >
         {NAV_ITEMS.map((item) => (
           <button
             key={item.sectionId}
             type="button"
-            className={`floating-nav__mobile-link ${
-              activeSection === item.sectionId
+            className={`floating-nav__mobile-link ${activeSection === item.sectionId
                 ? "floating-nav__mobile-link--active"
                 : ""
-            }`}
+              }`}
             onClick={() => scrollTo(item.sectionId)}
           >
             {item.label}
