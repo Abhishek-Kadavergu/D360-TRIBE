@@ -9,6 +9,7 @@ import Works from "./sections/Works";
 import ContactSummary from "./sections/ContactSummary";
 import Contact from "./sections/Contact";
 import { useProgress } from "@react-three/drei";
+import Footer from "./components/Footer";
 
 const App = () => {
   const { progress } = useProgress();
@@ -36,9 +37,8 @@ const App = () => {
         </div>
       )}
       <div
-        className={`${
-          isReady ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-1000`}
+        className={`${isReady ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-1000`}
       >
         <FloatingNav />
         <Hero />
@@ -47,7 +47,9 @@ const App = () => {
         <About />
         <Works />
         <ContactSummary />
-        <Contact />
+        {/* <Contact /> */}
+        <Footer />
+
       </div>
     </ReactLenis>
   );
