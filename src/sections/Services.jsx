@@ -48,15 +48,15 @@ const Services = () => {
         >
           <div className="flex items-center justify-between gap-4 font-light">
             <div className="flex flex-col gap-3 sm:gap-4 md:gap-6">
-              <h2 className="text-4xl lg:text-5xl">{service.title}</h2>
-              <p className="text-xl leading-relaxed tracking-widest lg:text-2xl text-white/60 text-pretty">
+              <h2 className="text-[clamp(1.5rem,3vw,2.25rem)]">{service.title}</h2>
+              <p className="text-[length:var(--text-body)] leading-relaxed tracking-wider text-white/50 text-pretty">
                 {service.description}
               </p>
-              <div className="flex flex-col gap-1 sm:gap-2 md:gap-4 text-2xl lg:text-3xl text-white/80">
+              <div className="flex flex-col gap-1 sm:gap-2 md:gap-3 text-[clamp(1rem,1.8vw,1.375rem)] text-white/80">
                 {service.items.map((item, itemIndex) => (
                   <div key={`item-${index}-${itemIndex}`} className="w-full">
                     <h3 className="flex w-full">
-                      <span className="mr-12 text-lg text-white/30 flex-shrink-0">
+                      <span className="mr-8 md:mr-12 text-sm text-white/30 flex-shrink-0">
                         0{itemIndex + 1}
                       </span>
                       <span className="flex-1">{item.title}</span>

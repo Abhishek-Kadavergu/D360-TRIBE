@@ -34,7 +34,7 @@ const ServiceSummary = () => {
     });
   });
   return (
-    <section className="mt-20 overflow-hidden font-light leading-snug text-center mb-42 contact-text-responsive">
+    <section className="mt-12 overflow-hidden font-light leading-snug text-center mb-24 contact-text-responsive">
       <div id="title-service-1">
         <p>Onboarding</p>
       </div>

@@ -32,19 +32,19 @@ const Contact = () => {
           textColor={"text-white"}
           withScrollTrigger={true}
         />
-        <div className="flex px-1 sm:px-1 md:px-3 lg:px-6 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-10 ultra-small-screen">
+        <div className="flex px-1 sm:px-1 md:px-3 lg:px-6 font-light text-white uppercase text-[clamp(1.25rem,2.5vw,1.75rem)] leading-tight mb-10 ultra-small-screen">
           <div className="flex flex-col w-full gap-10">
             <div className="social-link">
               <h2>E-mail</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl">
+              <p className="text-[length:var(--text-body-lg)] tracking-wider lowercase">
                 hello@d360tribe.com
               </p>
             </div>
             <div className="social-link">
               <h2>Sales</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl lowercase md:text-2xl lg:text-3xl">
+              <p className="text-[length:var(--text-body-lg)] lowercase">
                 Pick a slot. We show the product.
               </p>
             </div>

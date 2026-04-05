@@ -85,7 +85,7 @@ const Works = () => {
 
             <div className="flex justify-between px-1 sm:px-1 md:px-3 lg:px-6 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white ultra-small-screen">
               <div className="flex flex-col gap-1 md:gap-2 md:flex-row md:items-baseline md:justify-between md:w-full md:pr-8">
-                <h2 className="lg:text-[32px] text-[26px] leading-none">
+                <h2 className="text-[clamp(1.25rem,2.5vw,1.75rem)] leading-tight">
                   {project.name}
                 </h2>
                 <p className="text-sm md:text-base text-black/70 md:group-hover:text-white/80 md:max-w-xl md:text-right tracking-wide">

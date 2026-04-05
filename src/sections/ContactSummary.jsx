@@ -24,7 +24,7 @@ const ContactSummary = () => {
       className="flex flex-col items-center justify-center min-h-screen gap-2 mb-16"
     >
       <Marquee items={items} />
-      <div className="overflow-hidden font-light text-center contact-text-responsive mt-32">
+      <div className="overflow-hidden font-light text-center contact-text-responsive mt-16">
         <p>
           Scale the <span className="font-normal">business</span>.
           <br />
@@ -33,7 +33,7 @@ const ContactSummary = () => {
       </div>
 
       <div className="mt-16 flex flex-col items-center gap-6 px-4">
-        <p className="font-[family-name:var(--font-amiamie)] text-sm font-medium uppercase tracking-[0.35em] text-black md:text-base lg:text-lg">
+        <p className="font-[family-name:var(--font-amiamie)] text-xs font-medium uppercase tracking-[0.35em] text-black/60 md:text-sm">
           Powered by
         </p>
         <a
@@ -46,7 +46,7 @@ const ContactSummary = () => {
           <img
             src="/images/piazza-logo-black.png"
             alt="Piazza Consulting Group"
-            className="h-16 w-auto max-w-[min(90vw,320px)] object-contain md:h-20 lg:h-24"
+            className="h-20 w-auto max-w-[min(95vw,500px)] object-contain md:h-24 lg:h-28"
           />
         </a>
       </div>

@@ -41,7 +41,7 @@ const About = () => {
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-1 sm:px-1 md:px-3 lg:px-6 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60 ultra-small-screen">
+      <div className="flex flex-col items-center justify-between gap-10 lg:gap-16 px-1 sm:px-1 md:px-3 lg:px-6 pb-10 lg:pb-16 text-[length:var(--text-body-lg)] font-light tracking-wide lg:flex-row text-white/55 ultra-small-screen">
         <img
           ref={imgRef}
           src="images/image-02.jpg"
@@ -50,7 +50,7 @@ const About = () => {
         />
         <div className="w-full">
           <AnimatedTextLines text={aboutText} className={"w-full"} />
-          <div className="mt-4 space-y-2">
+          <div className="mt-4 space-y-2 text-[length:var(--text-body)]">
             <div className="flex items-center gap-3">
               <Icon icon="lucide:zap" className="text-white/80" />
               <span>Automate the full employee lifecycle</span>
