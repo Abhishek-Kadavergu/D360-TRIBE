@@ -33,7 +33,7 @@ const ContactSummary = () => {
       </div>
 
       <div className="mt-16 flex flex-col items-center gap-6 px-4">
-        <p className="font-[family-name:var(--font-amiamie)] text-xs font-medium uppercase tracking-[0.35em] text-black/60 md:text-sm">
+        <p className="font-[family-name:var(--font-amiamie)] text-base font-medium uppercase tracking-[0.35em] text-black/60 md:text-lg lg:text-xl">
           Powered by
         </p>
         <a
@@ -46,7 +46,7 @@ const ContactSummary = () => {
           <img
             src="/images/piazza-logo-black.png"
             alt="Piazza Consulting Group"
-            className="h-20 w-auto max-w-[min(95vw,500px)] object-contain md:h-24 lg:h-28"
+            className="h-32 w-auto max-w-[min(95vw,600px)] object-contain md:h-40 lg:h-48"
           />
         </a>
       </div>
